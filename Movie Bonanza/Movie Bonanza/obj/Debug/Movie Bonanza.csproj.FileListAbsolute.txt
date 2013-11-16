@@ -1,0 +1,10 @@
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\bin\Debug\Movie Bonanza.exe.config
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\bin\Debug\Movie Bonanza.exe
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\bin\Debug\Movie Bonanza.pdb
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie Bonanza.csprojResolveAssemblyReference.cache
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.Properties.Resources.resources
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.SplashScreenForm.resources
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie Bonanza.csproj.GenerateResource.Cache
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie Bonanza.exe
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie Bonanza.pdb
+C:\Users\durwin\Desktop\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.SelectionForm.resources
