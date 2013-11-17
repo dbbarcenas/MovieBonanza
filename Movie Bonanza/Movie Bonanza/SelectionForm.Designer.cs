@@ -31,6 +31,7 @@
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CostLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
@@ -41,9 +42,8 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.CategoryListBox = new System.Windows.Forms.ListBox();
             this.CategoryLbl = new System.Windows.Forms.Label();
-            this.MoviesPictureBox = new System.Windows.Forms.PictureBox();
             this.YourSelectionGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MoviesPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MoviesListBox
@@ -68,7 +68,7 @@
             // 
             // YourSelectionGroupBox
             // 
-            this.YourSelectionGroupBox.Controls.Add(this.MoviesPictureBox);
+            this.YourSelectionGroupBox.Controls.Add(this.MoviePictureBox);
             this.YourSelectionGroupBox.Controls.Add(this.TitleLabel);
             this.YourSelectionGroupBox.Controls.Add(this.CostLabel);
             this.YourSelectionGroupBox.Controls.Add(this.CategoryLabel);
@@ -81,6 +81,16 @@
             this.YourSelectionGroupBox.TabIndex = 2;
             this.YourSelectionGroupBox.TabStop = false;
             this.YourSelectionGroupBox.Text = "Your Selection";
+            // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MoviePictureBox.InitialImage = global::Movie_Bonanza.Properties.Resources.cedarrapids;
+            this.MoviePictureBox.Location = new System.Drawing.Point(18, 26);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(128, 198);
+            this.MoviePictureBox.TabIndex = 6;
+            this.MoviePictureBox.TabStop = false;
             // 
             // TitleLabel
             // 
@@ -150,6 +160,7 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.TabIndexChanged += new System.EventHandler(this.MoviesListBox_SelectedIndexChanged);
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CategoryListBox
@@ -180,16 +191,6 @@
             this.CategoryLbl.TabIndex = 6;
             this.CategoryLbl.Text = "Category";
             // 
-            // MoviesPictureBox
-            // 
-            this.MoviesPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MoviesPictureBox.InitialImage = global::Movie_Bonanza.Properties.Resources.cedarrapids;
-            this.MoviesPictureBox.Location = new System.Drawing.Point(18, 26);
-            this.MoviesPictureBox.Name = "MoviesPictureBox";
-            this.MoviesPictureBox.Size = new System.Drawing.Size(128, 198);
-            this.MoviesPictureBox.TabIndex = 6;
-            this.MoviesPictureBox.TabStop = false;
-            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,10 +208,11 @@
             this.MinimizeBox = false;
             this.Name = "SelectionForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selection";
             this.YourSelectionGroupBox.ResumeLayout(false);
             this.YourSelectionGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MoviesPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,14 +226,14 @@
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CategoryLabel;
-        private System.Windows.Forms.TextBox CostTextBox;
-        private System.Windows.Forms.TextBox CategoryTextBox;
-        private System.Windows.Forms.TextBox TitleTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.ListBox CategoryListBox;
         private System.Windows.Forms.Label CategoryLbl;
-        private System.Windows.Forms.PictureBox MoviesPictureBox;
+        public System.Windows.Forms.TextBox CostTextBox;
+        public System.Windows.Forms.TextBox CategoryTextBox;
+        public System.Windows.Forms.TextBox TitleTextBox;
+        public System.Windows.Forms.PictureBox MoviePictureBox;
+        public System.Windows.Forms.Button NextButton;
     }
 }
 

@@ -15,6 +15,7 @@ namespace Movie_Bonanza
 {
     public partial class SelectionForm : Form
     {
+        
         decimal[] downloadCost = new decimal[] 
         { 1.99m, 1.99m, 2.99m, 2.99m, 2.99m, 1.99m, 0.99m, 4.99m  };
 
@@ -40,6 +41,9 @@ namespace Movie_Bonanza
             Thread.Sleep(5000);
             InitializeComponent();
             t.Abort();
+
+           
+
         }
 
         /*
@@ -57,88 +61,89 @@ namespace Movie_Bonanza
             foreach (string value in MoviesListBox.SelectedItems) {
                 TitleTextBox.Text = value.ToString();
                 if (value == "The Dilemma") {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thedilemma);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.thedilemma);
                 }
                 if (value == "No Strings Attached")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.nostringsattached);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.nostringsattached);
                 }
                 if (value == "Cedar Rapids")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.cedarrapids);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.cedarrapids);
                 }
                 if (value == "Just Go With it")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.justgowithit);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.justgowithit);
                 }
                 if (value == "Company Men")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.companymen);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.companymen);
                 }
                 if (value == "The Way Back")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thewayback);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.thewayback);
                 }
                 if (value == "Waiting for Forever")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.waitingforever);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.waitingforever);
                 }
                 if (value == "The Green Hornet")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thegreenhornet);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.thegreenhornet);
                 }
                 if (value == "Death Race 2")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.deathrace2);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.deathrace2);
                 }
                 if (value == "The Mechanic")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.themechanic);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.themechanic);
                 }
                 if (value == "Sanctum")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.sanctum);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.sanctum);
                 }
                 if (value == "The Other Woman")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theotherwoman);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.theotherwoman);
                 }
                 if (value == "The Eagle")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theeagle);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.theeagle);
                 }
                 if (value == "Season of the Witch")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.seasonofthewitch);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.seasonofthewitch);
                 }
                 if (value == "I am Number Four")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.iamnumberfour);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.iamnumberfour);
                 }
                 if (value == "The Rite")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.therite);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.therite);
                 }
                 if (value == "The Roommate")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theroommate);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.theroommate);
                 }
                 if (value == "Gnomeo and Juliet")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.gnomeoandjuliet);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.gnomeoandjuliet);
                 }
                 if (value == "Footloose")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.footloose);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.footloose);
                 }
                 if (value == "Real Steel")
                 {
-                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.realsteel);
+                    MoviePictureBox.Image = new Bitmap(Properties.Resources.realsteel);
                 }
+                
             }
-           
-     
         }
+
+       
 
         private void CategoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -206,7 +211,19 @@ namespace Movie_Bonanza
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+
+            this.Hide();
+
+                OrderForm aOrderForm = new OrderForm();
+                aOrderForm.titleValue = TitleTextBox.Text;
+                aOrderForm.categoryValue = CategoryTextBox.Text;
+                aOrderForm.costValue = CostTextBox.Text;
+              
+                aOrderForm.ShowDialog();
+                MoviePictureBox.Image = aOrderForm.SelectedImage; 
+            
+            
+            
         }
     }
 }

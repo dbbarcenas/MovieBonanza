@@ -18,3 +18,4 @@ C:\Users\durwin\Desktop\MovieBonanza\Movie Bonanza\Movie Bonanza\obj\Debug\Movie
 C:\Users\durwin\Desktop\MovieBonanza\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.SelectionForm.resources
 C:\Users\durwin\Desktop\MovieBonanza\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.SplashScreenForm.resources
 C:\Users\durwin\Desktop\MovieBonanza\Movie Bonanza\Movie Bonanza\obj\Debug\Movie Bonanza.csproj.GenerateResource.Cache
+C:\Users\durwin\Desktop\MovieBonanza\Movie Bonanza\Movie Bonanza\obj\Debug\Movie_Bonanza.OrderForm.resources
