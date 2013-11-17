@@ -35,9 +35,9 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CostLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.CategoryListBox = new System.Windows.Forms.ListBox();
@@ -72,9 +72,9 @@
             this.YourSelectionGroupBox.Controls.Add(this.TitleLabel);
             this.YourSelectionGroupBox.Controls.Add(this.CostLabel);
             this.YourSelectionGroupBox.Controls.Add(this.CategoryLabel);
-            this.YourSelectionGroupBox.Controls.Add(this.textBox3);
-            this.YourSelectionGroupBox.Controls.Add(this.textBox2);
-            this.YourSelectionGroupBox.Controls.Add(this.textBox1);
+            this.YourSelectionGroupBox.Controls.Add(this.CostTextBox);
+            this.YourSelectionGroupBox.Controls.Add(this.CategoryTextBox);
+            this.YourSelectionGroupBox.Controls.Add(this.TitleTextBox);
             this.YourSelectionGroupBox.Location = new System.Drawing.Point(305, 69);
             this.YourSelectionGroupBox.Name = "YourSelectionGroupBox";
             this.YourSelectionGroupBox.Size = new System.Drawing.Size(382, 170);
@@ -117,29 +117,29 @@
             this.CategoryLabel.TabIndex = 3;
             this.CategoryLabel.Text = "Category";
             // 
-            // textBox3
+            // CostTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(314, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(53, 20);
-            this.textBox3.TabIndex = 2;
+            this.CostTextBox.Location = new System.Drawing.Point(314, 90);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(53, 20);
+            this.CostTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // CategoryTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 1;
+            this.CategoryTextBox.Location = new System.Drawing.Point(157, 90);
+            this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
+            this.CategoryTextBox.Size = new System.Drawing.Size(151, 20);
+            this.CategoryTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // TitleTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 0;
+            this.TitleTextBox.Location = new System.Drawing.Point(157, 42);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(210, 20);
+            this.TitleTextBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -158,6 +158,7 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CategoryListBox
             // 
@@ -222,9 +223,9 @@
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CategoryLabel;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CostTextBox;
+        private System.Windows.Forms.TextBox CategoryTextBox;
+        private System.Windows.Forms.TextBox TitleTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.ListBox CategoryListBox;
