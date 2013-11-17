@@ -135,32 +135,9 @@ namespace Movie_Bonanza
                 {
                     MoviesPictureBox.Image = new Bitmap(Properties.Resources.realsteel);
                 }
-
-
-
-                
-
             }
            
-            
-
-           // MoviesListBox.Text = string.Empty;
-
-            /*StringBuilder sb = new StringBuilder();
-            foreach (Object obj in MoviesListBox.SelectedItems)
-                sb.AppendFormat("{0} ", ((DataRowView)obj)[0].ToString());
-
-            TitleTextBox.Text = sb.ToString(); 
-        
-                //MoviesListBox.Items.Count
-            
-               for (int index = 0; index < MoviesListBox.Items.Count; index++)
-               {
-
-                    TitleTextBox.Text = MoviesListBox.SelectedIndex[index].ToString();
-                        index++; 
-                }*/
-             
+     
         }
 
         private void CategoryListBox_SelectedIndexChanged(object sender, EventArgs e)

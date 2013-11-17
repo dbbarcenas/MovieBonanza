@@ -31,7 +31,6 @@
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.MoviesPictureBox = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CostLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.CategoryListBox = new System.Windows.Forms.ListBox();
             this.CategoryLbl = new System.Windows.Forms.Label();
+            this.MoviesPictureBox = new System.Windows.Forms.PictureBox();
             this.YourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviesPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.MoviesListBox.FormattingEnabled = true;
             this.MoviesListBox.Location = new System.Drawing.Point(114, 69);
             this.MoviesListBox.Name = "MoviesListBox";
-            this.MoviesListBox.Size = new System.Drawing.Size(168, 199);
+            this.MoviesListBox.Size = new System.Drawing.Size(124, 199);
             this.MoviesListBox.Sorted = true;
             this.MoviesListBox.TabIndex = 0;
             this.MoviesListBox.Click += new System.EventHandler(this.MoviesListBox_SelectedIndexChanged);
@@ -75,27 +75,17 @@
             this.YourSelectionGroupBox.Controls.Add(this.CostTextBox);
             this.YourSelectionGroupBox.Controls.Add(this.CategoryTextBox);
             this.YourSelectionGroupBox.Controls.Add(this.TitleTextBox);
-            this.YourSelectionGroupBox.Location = new System.Drawing.Point(305, 69);
+            this.YourSelectionGroupBox.Location = new System.Drawing.Point(274, 69);
             this.YourSelectionGroupBox.Name = "YourSelectionGroupBox";
-            this.YourSelectionGroupBox.Size = new System.Drawing.Size(415, 212);
+            this.YourSelectionGroupBox.Size = new System.Drawing.Size(415, 240);
             this.YourSelectionGroupBox.TabIndex = 2;
             this.YourSelectionGroupBox.TabStop = false;
             this.YourSelectionGroupBox.Text = "Your Selection";
             // 
-            // MoviesPictureBox
-            // 
-            this.MoviesPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MoviesPictureBox.InitialImage = global::Movie_Bonanza.Properties.Resources.cedarrapids;
-            this.MoviesPictureBox.Location = new System.Drawing.Point(18, 26);
-            this.MoviesPictureBox.Name = "MoviesPictureBox";
-            this.MoviesPictureBox.Size = new System.Drawing.Size(145, 167);
-            this.MoviesPictureBox.TabIndex = 6;
-            this.MoviesPictureBox.TabStop = false;
-            // 
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(189, 26);
+            this.TitleLabel.Location = new System.Drawing.Point(167, 24);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(27, 13);
             this.TitleLabel.TabIndex = 5;
@@ -104,7 +94,7 @@
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(353, 71);
+            this.CostLabel.Location = new System.Drawing.Point(331, 69);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(28, 13);
             this.CostLabel.TabIndex = 4;
@@ -113,7 +103,7 @@
             // CategoryLabel
             // 
             this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Location = new System.Drawing.Point(189, 71);
+            this.CategoryLabel.Location = new System.Drawing.Point(167, 69);
             this.CategoryLabel.Name = "CategoryLabel";
             this.CategoryLabel.Size = new System.Drawing.Size(49, 13);
             this.CategoryLabel.TabIndex = 3;
@@ -121,7 +111,7 @@
             // 
             // CostTextBox
             // 
-            this.CostTextBox.Location = new System.Drawing.Point(346, 90);
+            this.CostTextBox.Location = new System.Drawing.Point(324, 88);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(53, 20);
@@ -129,7 +119,7 @@
             // 
             // CategoryTextBox
             // 
-            this.CategoryTextBox.Location = new System.Drawing.Point(189, 90);
+            this.CategoryTextBox.Location = new System.Drawing.Point(167, 88);
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.ReadOnly = true;
             this.CategoryTextBox.Size = new System.Drawing.Size(151, 20);
@@ -137,7 +127,7 @@
             // 
             // TitleTextBox
             // 
-            this.TitleTextBox.Location = new System.Drawing.Point(189, 42);
+            this.TitleTextBox.Location = new System.Drawing.Point(167, 40);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(210, 20);
@@ -154,7 +144,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(612, 287);
+            this.NextButton.Location = new System.Drawing.Point(614, 315);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 4;
@@ -190,11 +180,21 @@
             this.CategoryLbl.TabIndex = 6;
             this.CategoryLbl.Text = "Category";
             // 
+            // MoviesPictureBox
+            // 
+            this.MoviesPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MoviesPictureBox.InitialImage = global::Movie_Bonanza.Properties.Resources.cedarrapids;
+            this.MoviesPictureBox.Location = new System.Drawing.Point(18, 26);
+            this.MoviesPictureBox.Name = "MoviesPictureBox";
+            this.MoviesPictureBox.Size = new System.Drawing.Size(128, 198);
+            this.MoviesPictureBox.TabIndex = 6;
+            this.MoviesPictureBox.TabStop = false;
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 373);
+            this.ClientSize = new System.Drawing.Size(702, 345);
             this.ControlBox = false;
             this.Controls.Add(this.CategoryLbl);
             this.Controls.Add(this.CategoryListBox);
