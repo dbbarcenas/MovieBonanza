@@ -42,8 +42,6 @@ namespace Movie_Bonanza
             InitializeComponent();
             t.Abort();
 
-           
-
         }
 
         /*

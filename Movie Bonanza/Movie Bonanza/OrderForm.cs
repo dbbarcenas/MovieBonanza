@@ -14,8 +14,6 @@ namespace Movie_Bonanza
     {
         private string title, category, cost;
 
-        
-
         public string titleValue {
             get { return title; }
             set { title = value; }
@@ -89,18 +87,28 @@ namespace Movie_Bonanza
                 SubTotalTextBox.Text = subTotal.ToString("C");
                 GrandTotalTextBox.Text = grandTotal.ToString("C"); 
             }
-
-            
-            
-           
         }
 
         private void StreamButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             StreamForm aStreamForm = new StreamForm();
+            aStreamForm.titleValue = TitleTextBox.Text;
+            aStreamForm.totalValue = GrandTotalTextBox.Text;
             aStreamForm.ShowDialog(); 
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            printForm1.Print(); 
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aSummaryForm = new AboutBox1();
+            // show the new form obejct
+            aSummaryForm.ShowDialog();
         }
     }
 }
