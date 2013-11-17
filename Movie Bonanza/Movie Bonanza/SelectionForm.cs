@@ -18,14 +18,15 @@ namespace Movie_Bonanza
         decimal[] downloadCost = new decimal[] 
         { 1.99m, 1.99m, 2.99m, 2.99m, 2.99m, 1.99m, 0.99m, 4.99m  };
 
-        string[] category = new string[] { "Comedy", "Drama", "Action", "Sci-Fi", "Horror", "Thriller", "Family", "New Release" }; 
+        string[] movies = new string[] { };
 
-        string[] comedyMovies = new string[] { "The Delemma", "No Strings Attached", "Cedar Rapids", "Just Go With it" };
+        string[] category = new string[] { "Comedy", "Drama", "Action", "Sci-Fi", "Horror", "Thriller", "Family", "New Release" };
+        string[] comedyMovies = new string[] { "The Dilemma", "No Strings Attached", "Cedar Rapids", "Just Go With it" };
         string[] dramaMovies = new string[] {"Company Men", "The Way Back", "Waiting for Forever"  };
         string[] actionMovies = new string[] {"The Green Hornet", "Death Race 2", "The Mechanic", "Sanctum", "The Other Woman", "The Eagle" };
         string[] scifiMovies = new string[] {"Season of the Witch", "I am Number Four" };
         string[] horrorMovies = new string[] {"The Rite"};
-        string[] thrillerMovies = new string[] {"The Roomate" };
+        string[] thrillerMovies = new string[] {"The Roommate" };
         string[] familyMovies = new string[] {"Gnomeo and Juliet" };
         string[] newReleaseMovies = new string[] {"Footloose", "Real Steel" }; 
         
@@ -53,9 +54,92 @@ namespace Movie_Bonanza
         {
             TitleTextBox.Text = string.Empty; 
            
-            foreach (string index in MoviesListBox.SelectedItems) {
-                TitleTextBox.Text = index.ToString();
-               
+            foreach (string value in MoviesListBox.SelectedItems) {
+                TitleTextBox.Text = value.ToString();
+                if (value == "The Dilemma") {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thedilemma);
+                }
+                if (value == "No Strings Attached")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.nostringsattached);
+                }
+                if (value == "Cedar Rapids")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.cedarrapids);
+                }
+                if (value == "Just Go With it")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.justgowithit);
+                }
+                if (value == "Company Men")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.companymen);
+                }
+                if (value == "The Way Back")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thewayback);
+                }
+                if (value == "Waiting for Forever")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.waitingforever);
+                }
+                if (value == "The Green Hornet")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.thegreenhornet);
+                }
+                if (value == "Death Race 2")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.deathrace2);
+                }
+                if (value == "The Mechanic")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.themechanic);
+                }
+                if (value == "Sanctum")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.sanctum);
+                }
+                if (value == "The Other Woman")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theotherwoman);
+                }
+                if (value == "The Eagle")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theeagle);
+                }
+                if (value == "Season of the Witch")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.seasonofthewitch);
+                }
+                if (value == "I am Number Four")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.iamnumberfour);
+                }
+                if (value == "The Rite")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.therite);
+                }
+                if (value == "The Roommate")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.theroommate);
+                }
+                if (value == "Gnomeo and Juliet")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.gnomeoandjuliet);
+                }
+                if (value == "Footloose")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.footloose);
+                }
+                if (value == "Real Steel")
+                {
+                    MoviesPictureBox.Image = new Bitmap(Properties.Resources.realsteel);
+                }
+
+
+
+                
+
             }
            
             
