@@ -214,13 +214,13 @@ namespace Movie_Bonanza
 
             this.Hide();
 
-                OrderForm aOrderForm = new OrderForm();
+                OrderForm aOrderForm = new OrderForm(MoviePictureBox.Image);
                 aOrderForm.titleValue = TitleTextBox.Text;
                 aOrderForm.categoryValue = CategoryTextBox.Text;
                 aOrderForm.costValue = CostTextBox.Text;
-              
+                
                 aOrderForm.ShowDialog();
-                MoviePictureBox.Image = aOrderForm.SelectedImage; 
+                
             
             
             

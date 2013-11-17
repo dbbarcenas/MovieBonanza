@@ -14,12 +14,7 @@ namespace Movie_Bonanza
     {
         private string title, category, cost;
 
-        public Image SelectedImage {
-            get {
-                return MoviePictureBox.Image;
-            }
-           
-        }
+        
 
         public string titleValue {
             get { return title; }
@@ -39,6 +34,12 @@ namespace Movie_Bonanza
         public OrderForm()
         {
             InitializeComponent();
+        }
+
+        public OrderForm(System.Drawing.Image i)
+        {
+            InitializeComponent();
+            MoviePictureBox.Image = i; 
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
