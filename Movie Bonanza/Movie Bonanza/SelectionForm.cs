@@ -221,9 +221,6 @@ namespace Movie_Bonanza
                 
                 aOrderForm.ShowDialog();
                 
-            
-            
-            
         }
     }
 }

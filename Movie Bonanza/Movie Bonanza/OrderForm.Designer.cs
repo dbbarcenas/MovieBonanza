@@ -46,8 +46,8 @@
             this.TitleLabel2 = new System.Windows.Forms.Label();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
             this.BuyCheckBox = new System.Windows.Forms.CheckBox();
-            this.additionalCost = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AdditionalCostLabel = new System.Windows.Forms.Label();
+            this.AdditionalCostTextBox = new System.Windows.Forms.TextBox();
             this.GrandTotalLabel = new System.Windows.Forms.Label();
             this.SalesTaxLabel = new System.Windows.Forms.Label();
             this.SubTotalLabel = new System.Windows.Forms.Label();
@@ -205,8 +205,8 @@
             // YourOrderGroupBox
             // 
             this.YourOrderGroupBox.Controls.Add(this.BuyCheckBox);
-            this.YourOrderGroupBox.Controls.Add(this.additionalCost);
-            this.YourOrderGroupBox.Controls.Add(this.textBox1);
+            this.YourOrderGroupBox.Controls.Add(this.AdditionalCostLabel);
+            this.YourOrderGroupBox.Controls.Add(this.AdditionalCostTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxLabel);
             this.YourOrderGroupBox.Controls.Add(this.SubTotalLabel);
@@ -231,23 +231,26 @@
             this.BuyCheckBox.TabIndex = 15;
             this.BuyCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
             this.BuyCheckBox.UseVisualStyleBackColor = true;
+            this.BuyCheckBox.Click += new System.EventHandler(this.OrderForm_Load);
             // 
-            // additionalCost
+            // AdditionalCostLabel
             // 
-            this.additionalCost.AutoSize = true;
-            this.additionalCost.Location = new System.Drawing.Point(54, 92);
-            this.additionalCost.Name = "additionalCost";
-            this.additionalCost.Size = new System.Drawing.Size(77, 13);
-            this.additionalCost.TabIndex = 14;
-            this.additionalCost.Text = "Additional Cost";
+            this.AdditionalCostLabel.AutoSize = true;
+            this.AdditionalCostLabel.Location = new System.Drawing.Point(54, 92);
+            this.AdditionalCostLabel.Name = "AdditionalCostLabel";
+            this.AdditionalCostLabel.Size = new System.Drawing.Size(77, 13);
+            this.AdditionalCostLabel.TabIndex = 14;
+            this.AdditionalCostLabel.Text = "Additional Cost";
+            this.AdditionalCostLabel.Visible = false;
             // 
-            // textBox1
+            // AdditionalCostTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.AdditionalCostTextBox.Location = new System.Drawing.Point(159, 85);
+            this.AdditionalCostTextBox.Name = "AdditionalCostTextBox";
+            this.AdditionalCostTextBox.ReadOnly = true;
+            this.AdditionalCostTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AdditionalCostTextBox.TabIndex = 13;
+            this.AdditionalCostTextBox.Visible = false;
             // 
             // GrandTotalLabel
             // 
@@ -369,7 +372,7 @@
         private System.Windows.Forms.Label SalesTaxLabel;
         private System.Windows.Forms.Label SubTotalLabel;
         private System.Windows.Forms.Label CostLabel2;
-        private System.Windows.Forms.Label additionalCost;
+        private System.Windows.Forms.Label AdditionalCostLabel;
         public System.Windows.Forms.TextBox CategoryTextBox;
         public System.Windows.Forms.TextBox TitleTextBox;
         public System.Windows.Forms.PictureBox MoviePictureBox;
@@ -377,7 +380,7 @@
         public System.Windows.Forms.TextBox SalesTaxTextBox;
         public System.Windows.Forms.TextBox SubTotalTextBox;
         public System.Windows.Forms.TextBox CostTextBox;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox AdditionalCostTextBox;
         private System.Windows.Forms.CheckBox BuyCheckBox;
     }
 }

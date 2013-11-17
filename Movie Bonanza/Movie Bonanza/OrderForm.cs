@@ -59,7 +59,40 @@ namespace Movie_Bonanza
         {
             TitleTextBox.Text = title;
             CategoryTextBox.Text = category;
-            CostTextBox.Text = cost; 
+            CostTextBox.Text = cost;
+            decimal buyMovie = 10.00m;
+            decimal subTotal = decimal.Parse(CostTextBox.Text);
+            decimal salesTax = 0.13m * subTotal;
+            decimal grandTotal = salesTax + subTotal; 
+
+            if (BuyCheckBox.Checked)
+            {
+                AdditionalCostTextBox.Visible = true;
+                AdditionalCostLabel.Visible = true; 
+                decimal tempSubTotal = subTotal + buyMovie;
+                decimal tempSalesTax = 0.13m * tempSubTotal;
+                decimal tempGrandTotal = tempSalesTax + tempSubTotal; 
+                subTotal = tempSubTotal;
+                salesTax = tempSalesTax;
+                grandTotal = tempGrandTotal;
+                GrandTotalTextBox.Text = grandTotal.ToString("C"); 
+                SubTotalTextBox.Text = subTotal.ToString("C");
+                SalesTaxTextBox.Text = salesTax.ToString("C");
+                AdditionalCostTextBox.Text = buyMovie.ToString("C"); 
+
+            }
+            else
+            {
+                AdditionalCostTextBox.Visible = false;
+                AdditionalCostLabel.Visible = false; 
+                SalesTaxTextBox.Text = salesTax.ToString("C");
+                SubTotalTextBox.Text = subTotal.ToString("C");
+                GrandTotalTextBox.Text = grandTotal.ToString("C"); 
+            }
+
+            
+            
+           
         }
 
         private void StreamButton_Click(object sender, EventArgs e)
